@@ -1,0 +1,8 @@
+.env
+.env.*
+/vendor/
+/src/keys/
+/*.pem
+/*.key
+client_secret.json
+credentials.json

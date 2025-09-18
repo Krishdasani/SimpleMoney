@@ -1,0 +1,8 @@
+{
+    "require": {
+        "league/oauth2-client": "^2.8",
+        "firebase/php-jwt": "^6.11",
+        "league/oauth2-google": "^4.0",
+        "truelayer/signing": "^1.0"
+    }
+}
