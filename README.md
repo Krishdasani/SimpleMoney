@@ -146,7 +146,7 @@ Go to Connect Bank → Connect with TrueLayer (goes straight to TL via auth/tl_s
 
 After the callback, check Transactions and Insights.
 
-🔐 Authentication & Guards
+## 🔐 Authentication & Guards
 
 requireUser($pdo) – for pages, redirects to /public/login.php?next=…
 
@@ -154,7 +154,7 @@ requireUserApi($pdo) – for APIs, returns 401 JSON (no redirect)
 
 public/logout.php – destroys session, clears cookies, (optionally) revokes refresh tokens, then redirects to login
 
-🏦 TrueLayer Flow
+## 🏦 TrueLayer Flow
 
 Connect button in public/connect.php is a plain <a> to public/auth/tl_start.php → opens the TrueLayer consent.
 
@@ -172,7 +172,7 @@ In tl_start.php, set $_SESSION['tl_replace_id'] for ?action=reauth&id=…, then 
 AMEX note
 AMEX is a card provider, so data comes from /data/v1/cards (not /accounts). The UI merges accounts + cards.
 
-💬 AI “Spend Coach”
+## 💬 AI “Spend Coach”
 
 Widget: public/partials/chat_widget.php
 
@@ -184,7 +184,7 @@ No server-side chat storage; last ~40 turns per user live in localStorage
 
 Disable by removing the widget include (e.g., from navbar.php).
 
-🗃️ Database
+## 🗃️ Database
 
 Used tables (lean):
 
@@ -198,7 +198,7 @@ budgets (optional)
 
 If your dump contains older mirrors (e.g., local accounts/transactions caches), they’re not required.
 
-🧪 Troubleshooting
+## 🧪 Troubleshooting
 
 403 “SCA exemption has expired”
 The resource is protected; use Reconnect to obtain fresh consent.
@@ -212,15 +212,15 @@ Ensure public/auth/tl_start.php exists and env values are set. For API-based sta
 AMEX doesn’t appear in the selector
 Confirm the consent includes cards scope and the provider id (ob-amex). The UI shows cards and accounts together.
 
-🤝 Contributing
+## 🤝 Contributing
 
 PRs welcome! Please keep the UI minimal, avoid heavy build tooling, and don’t commit secrets or real data.
 
-📄 License
+## 📄 License
 
 MIT (change to your preferred license if needed)
 
-🗺️ Roadmap
+## 🗺️ Roadmap
 
 Auto-categorisation rules
 
